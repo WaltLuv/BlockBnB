@@ -15,7 +15,7 @@ import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 const { chains, provider } = configureChains(
   [chain.polygonMumbai, chain.localhost],
   [
-    infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY, priority: 1 }),
+    infuraProvider({ apiKey: 'a97a998c1d38451db7fe06146ef104f7', priority: 1 }),
     jsonRpcProvider({
       priority: 2,
       rpc: _chain => ({
