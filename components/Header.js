@@ -23,31 +23,7 @@ const Header = ({
         
         </div>
       </Link>
-      <div className='flex-1 flex xl:justify-center px-6 transition-all duration-300'>
-          <div className='flex items-center divide-x'>
-            <p className='text-white bg-transparent text-sm font-medium px-4'>
-              Escrow
-            </p>
-            <p
-              className='text-white bg-transparent text-sm font-medium px-4'
-              type='text'
-            >
-              Buy
-            </p>
-            <p
-              className='text-white bg-transparent text-sm font-medium px-4'
-              type='text'
-            >
-              Sell
-            </p>
-            <p className='text-white bg-transparent text-sm font-medium px-4'>
-              Rent
-            </p>
-            <p className='text-white bg-transparent text-sm font-medium px-4'>
-              Syndicate
-            </p>
-          </div>
-      </div>
+      
 
       <div className='flex items-center justify-end'>
         <div className='border border-transparent cursor-pointer hover:bg-gray-100 rounded-full px-3 py-2'>
@@ -59,10 +35,6 @@ const Header = ({
           </a>*/}
         </div>
 
-        <div className='border border-transparent cursor-pointer hover:bg-gray-100 rounded-full p-3'>
-          <GlobeAmericasIcon className='h-5 w-5 transition-all duration-300 text-gray-800' />
-        </div>
-        <ConnectButton />
       </div>
     </header>
     
