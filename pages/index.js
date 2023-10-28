@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 //import FilterMenu from '../components/FilterMenu'
@@ -8,10 +9,7 @@ import NewListingModal from '../components/Listings/NewListingModal'
 import BookingModal from '../components/Listings/BookingModal'
 import { useAirbnb } from '../hooks/useAirbnb'
 import Link from "next/link";
-import {
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
-import Image from "next/image";
+//import Image from "next/image";
 
 export default function Home() {
   const [showReservedListing, setShowReservedListing] = useState(false)
@@ -32,15 +30,11 @@ export default function Home() {
         {/*<FilterMenu />*/}
         <section className="flex items-center space-x-2 bg-black text-white">
           <div className="flex justify-center">
-            Blocklock Rental Marketplace
+            <ConnectButton />
           </div>
+
         <div className="flex items-center space-x-2 px-2 md:px-5 py-2 border-black border-2 flex-1">
-          <MagnifyingGlassIcon className="w-5 text-gray-400" />
-          <input
-            className="flex-1 outline-none text-black"
-            placeholder="Search by seller wallet address"
-            type="text"
-          />
+      
         </div>
 
         <Link href="/listing">
@@ -52,15 +46,29 @@ export default function Home() {
       <hr />
 
       <section className="flex py-3 space-x-6 text-xs md:text-sm whitespace-nowrap justify-center px-6 bg-black text-white">
-        <p className="link">Avatars</p>
-        <p className="link">NFT Passports</p>
-        <p className="link">Documents</p>
-        <p className="link">Inspections</p>
-        <p className="link">Titles</p>
-        <p className="link hidden sm:inline">Appraisals</p>
-        <p className="link hidden md:inline">Photos</p>
-        <p className="link hidden md:inline">Videos</p>
-        <p className="link hidden sm:inline">3D Models</p>
+      <div className='flex items-center divide-x'>
+            <p className='text-white bg-transparent text-sm font-medium px-4'>
+              Escrow
+            </p>
+            <p
+              className='text-white bg-transparent text-sm font-medium px-4'
+              type='text'
+            >
+              Buy
+            </p>
+            <p
+              className='text-white bg-transparent text-sm font-medium px-4'
+              type='text'
+            >
+              Sell
+            </p>
+            <p className='text-white bg-transparent text-sm font-medium px-4'>
+              Rent
+            </p>
+            <p className='text-white bg-transparent text-sm font-medium px-4'>
+              Syndicate
+            </p>
+          </div>
       </section>
     </div>
       
@@ -81,3 +89,4 @@ export default function Home() {
     </div>
   )
 }
+
